@@ -6,7 +6,7 @@ use crate::graph::Graph;
 pub mod containers;
 
 /// A container for storing data associated with nodes or edges in a graph.
-pub trait DataContainer<Id, Data> {
+pub trait DataContainer<Id, Data: Clone> {
     /// Returns a reference to the data associated with the given id.
     ///
     /// May return a reference to a default value if no data is associated with the id.
